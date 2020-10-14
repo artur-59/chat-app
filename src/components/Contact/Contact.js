@@ -1,20 +1,20 @@
 import React from 'react';
 import './Contact.css';
-import ContactList from './ContactList'
 
 
 function Contact(props) {
+  const { name, avatar, online } = props;
   return (
     <div>
         <figure class="Contact">
-            <img  class="avatar" src={props.avatar} alt={props.name} />
+            <img  class="avatar" src={avatar} alt={name} />
       <figcaption>
         <blockquote class="name">
-          {props.name}
+          {name}
         </blockquote>
         <div class="status">
-        <div class="status-online"></div>
-        <p class="status-text">{props.online}</p></div>
+        <div class={online ? "status-online" : "status-offline"}></div>
+        <p class="status-text">{online ? "online" : "offline"}</p></div>
       </figcaption>
     </figure>
     </div>
