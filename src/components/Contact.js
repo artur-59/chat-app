@@ -1,11 +1,6 @@
 import React from 'react';
 import './Contact.css';
-
-const avatar = <img src="https://randomuser.me/api/portraits/women/54.jpg" alt="Judy Herrera picture" />;
-
-const name = 'Judy Herrera';
-
-const online = {props.online};
+import ContactList from './ContactList'
 
 
 function Contact(props) {
@@ -17,8 +12,8 @@ function Contact(props) {
         <blockquote class="name">
           {props.name}
         </blockquote>
-        <div class="status" {props.online ? "Online" : "Offline"}>
-        <div class="status-online" {props.online ? "Online" : "Offline"}></div>
+        <div class="status">
+        <div class="status-online"></div>
         <p class="status-text">{props.online}</p></div>
       </figcaption>
     </figure>

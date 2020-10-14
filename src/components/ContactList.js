@@ -1,5 +1,5 @@
 import React from 'react';
-import Contact from './Contact';
+
 
 const users = [
     {
@@ -32,9 +32,20 @@ const users = [
 function ContactList () {
     return (
         <div>
-            <Contact
-            {users.map(user => name={user.name} avatar={user.avatar} status={user.online})}
-            />
+            {users.map(user => (
+                <div>
+                    <div>   
+                        {user.name}
+                    </div>
+                    <div>
+                        {user.avatar}
+                    </div>
+                    <div>
+                        {user.online}
+                    </div>
+                </div>
+                )
+            )}
         </div>
     );
 }
